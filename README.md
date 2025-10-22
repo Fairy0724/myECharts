@@ -18,7 +18,7 @@ ECharts数据可视化项目，专注于数据可视化面板的布局适配与E
   - 地图数据引入与展示
 
 ## 成品展示
-![数据可视化]()
+![数据可视化](https://github.com/Fairy0724/myECharts/blob/master/screenshots/myECharts.png)
 
 ## 快速开始
 
