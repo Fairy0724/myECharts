@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      width: 300px;
+      height: 300px;
+      background-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box"></div>
+  <!-- <script src="js/echarts.min.js"></script> -->
+  <script type="module">
+    import * as echarts from './node_modules/echarts/dist/echarts.esm.js';
+
+    // 1. 初始化echarts实例对象
+    const myChart = echarts.init(document.querySelector('.box'));
+    // 2. 配置和数据并绘制图表
+    myChart.setOption({
+      // 标题
+      title: {
+        text: 'ECharts 入门示例'
+      },
+      // 提示框组件
+      //trigger触发方式
+      tooltip: {},
+      // legend：图例组件
+      // toolbox  工具箱组件  可以另存为图片等功能
+      // grid 网格配置 --可以控制线形图 柱状图 图表大小
+      // x轴
+      xAxis: {
+        data: ['衬衫', '羊毛衫', '雪纺衫', '裤子', '高跟鞋', '袜子']
+      },
+      // y轴
+      yAxis: {},
+      // 系列
+      series: [
+        {
+          name: '销量',
+          type: 'bar',
+          data: [5, 20, 36, 10, 10, 20]
+        }
+      ]
+    });
+  </script>
+</body>
+
+</html>
